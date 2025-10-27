@@ -1,0 +1,42 @@
+ _   _  ____   _   _   ___   _  _   ____                               
+) \_/ (/ __ \ \ ( ) / )_ _( ) \/ ( ).-._(                              
+|  _  |))__((  )\_/(  _| |_ |  \ | |( ,-.                              
+)_( )_(\____/   \_/  )_____()_()_( )_`__(                              
+ ___  _  _   ___   ___   ___     ____   ___   ___   ___  ___    ___ 
+/ _( ) () ( ) __( (  _( (  _(   )  _)\ )_ _( ) __( / _( ) __(  (  _(
+))_  | -- | | _)  _) \  _) \    | '__/ _| |_ | _)  ))_  | _)   _) \ 
+\__( )_()_( )___()____))____)   )_(   )_____()___( \__( )___( )____)
+
+NÍVEL NOVATO:
+
+Instruções Detalhadas:
+
+Movimentação das Peças:
+
+Bispo: 5 casas na diagonal superior direita
+Torre: 5 casas para a direita
+Rainha: 8 casas para a esquerda
+
+Entrada de Dados:
+Inclua a biblioteca padrão de entrada e saída no início do seu programa.
+Declare variáveis constantes para definir os valores a serem comparados dentro das estruturas condicionais.
+
+Estruturas de Repetição:
+Utilize cada uma das diferentes estruturas de repetição apresentadas(for, while, do-while).
+
+Saída:
+As saídas deverão ser mostradas de forma clara e organizada, com a direção da peça.
+
+Nomenclatura:
+printf("Cima\n"); printf("Baixo\n"); printf("Esquerda\n"); printf("Direita\n");
+
+NÍVEL AVENTUREIRO:
+
+Movimentação do Cavalo:
+Mover o cavalo em L utilizando loops aninhados. Obs: É obrigatório o uso de loops aninhados.
+
+NÍVEL MESTRE:
+
+Movimentação das Peças:
+Bispo: 5 casas na diagonal direita para cima Torre: 5 casas para a direita Rainha: 8 casas para a esquerda 
+Cavalo: 1 vez em L para cima à direita Obs: É obrigatório o uso de loops aninhados na movimentação do bispo e funções recursivas.
