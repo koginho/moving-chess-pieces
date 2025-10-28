@@ -10,7 +10,7 @@ int main()
     do
     {
 
-        // Exibe os dados 
+        // show the options
         printf("-= Menu =-\n");
         printf("-= 1. Regras.\n");
         printf("-= 2. Iniciar.\n");
@@ -18,23 +18,27 @@ int main()
         printf("Escolha uma alternativa: ");
         scanf("%d", &options);
 
+        // menu logic
         switch (options)
         {
         case 1:
+            /* basic rules of the moviment of the pieces */
+
             printf("-=-=-=-=-=-=-=-=-=-=-=-\n");
             printf("-= Movimentação das peças: \n");
             printf("-= Bispo: 5 casas na diagonal superior direita\n");
             printf("-= Torre: 5 casas para a direita\n");
             printf("-= Rainha: 8 casas para a esquerda\n");
 
-            // Pausa a execução.
+            // Stop the execution
             printf("Preciona ENTER para continuar. \n");
             getchar();
             getchar();
 
             break;
         case 2:
-            int piece, bishop, rook, queen;
+            /* let the user choose what piece he wanna move */
+            int piece, bishop, rook, queen, knight;
 
             do
             {
@@ -43,7 +47,8 @@ int main()
                 printf("1. Bispo.\n");
                 printf("2. Torre.\n");
                 printf("3. Rainha.\n");
-                printf("4. Sair.\n");
+                printf("4. Cavalo.\n");
+                printf("5. Sair.\n");
 
                 printf("Escolha uma alternativa: ");
                 scanf("%d", &piece);
@@ -52,6 +57,7 @@ int main()
                 {
                 case 1:
                     /* Bispo while*/
+
                     bishop = 0;
                     while (bishop < 5)
                     {
@@ -62,7 +68,7 @@ int main()
 
                     break;
                 case 2:
-                    /* Torre do-while*/
+                    /* Rook do-while*/
                     rook = 0;
                     do
                     {
@@ -72,7 +78,8 @@ int main()
 
                     break;
                 case 3:
-                    /* Rainha for*/
+                    /* Queen for*/
+
                     for (queen = 0; queen < 8; queen++)
                     {
                         printf("Esqueda\n");
@@ -80,6 +87,24 @@ int main()
 
                     break;
                 case 4:
+                    /* knight nested loop */
+
+                    knight = 0;
+
+                    do
+                    {
+                        printf("Cima\n");
+                        knight++;
+                        while (knight == 3)
+                        {
+                            printf("Direita\n");
+                            knight++;
+                        }
+                    } while (knight < 3);
+
+                case 5:
+                    /* Leave the moving piece option */
+
                     printf("Saindo...\n");
                     break;
                 default:
@@ -90,7 +115,7 @@ int main()
 
             break;
         case 3:
-            /* sair */
+            /* leave the program */
             printf("Saindo...\n");
             break;
         default:
