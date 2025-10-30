@@ -1,5 +1,43 @@
 #include <stdio.h>
 
+void breakLine(){
+    printf("\n");
+}
+
+void rookLoop(int n)
+{
+    if (n > 0)
+    {
+        printf("Direita\n");
+        rookLoop(n - 1);
+    }
+}
+
+void queenLoop(int n)
+{
+    if (n > 0)
+    {
+        printf("Esquerda\n");
+        queenLoop(n - 1);
+    }
+}
+
+void bishopLoop(int n)
+{
+    if (n > 0)
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            printf("Cima\n");
+            for (int j = 0; j < 1; j++)
+            {
+                printf("Direita\n");
+            }
+        }
+        bishopLoop(n - 1);
+    }
+}
+
 int main()
 {
 
@@ -29,7 +67,7 @@ int main()
             printf("-= Bispo: 5 casas na diagonal superior direita\n");
             printf("-= Torre: 5 casas para a direita\n");
             printf("-= Rainha: 8 casas para a esquerda\n");
-            printf("-= Cavalo 2 casas para baixo e 1 casa para esquerda\n");
+            printf("-= Cavalo 2 casas para cima e 1 casa para direita\n");
 
             // Stop the execution
             printf("Preciona ENTER para continuar. \n");
@@ -57,53 +95,57 @@ int main()
                 switch (piece)
                 {
                 case 1:
-                    /* Bispo while*/
+                    /* Bishop recursion-loop*/
 
-                    bishop = 0;
-                    while (bishop < 5)
-                    {
-                        printf("Cima\n");
-                        printf("Direita\n");
-                        bishop++;
-                    }
+                    printf("Peça escolhida: Bispo.\n");
+                    breakLine();
 
+                    bishop = 5;
+                    bishopLoop(bishop);
+
+                    breakLine();
                     break;
                 case 2:
-                    /* Rook do-while*/
-                    rook = 0;
-                    do
-                    {
-                        printf("Direita\n");
-                        rook++;
-                    } while (rook < 5);
+                    /* Rook recursion-loop*/
 
+                    printf("Peça escolhida: Torre.\n");
+                    breakLine();
+
+                    rook = 5;
+                    rookLoop(rook);
+
+                    breakLine();
                     break;
                 case 3:
-                    /* Queen for*/
+                    /* Queen recursion-loop*/
 
-                    for (queen = 0; queen < 8; queen++)
-                    {
-                        printf("Esqueda\n");
-                    }
+                    printf("Peça escolhida: Rainha.\n");
+                    breakLine();
 
+                    queen = 8;
+                    queenLoop(queen);
+
+                    breakLine();
                     break;
                 case 4:
-                    /* knight nested loop */
+                    /* knight nested loop with multiple variable */
 
-                    for (knight = 0; knight < 2; knight++)
+                    printf("Peça escolhida: Cavalo.\n");
+                    breakLine();
+
+                    for (int knightR = 2, knight = 0; knight < 2 && knightR > 0; knight++, knightR--)
                     {
-                        printf("Baixo\n");
+                        printf("Cima\n");
                         while (knight == 1)
                         {
-                            printf("Esquerda\n");
+                            printf("Direita\n");
                             knight++;
-                        } 
+                        }
                     }
 
-                    break;
-                    
-/*  same as the loop obove, but using do-while and while.
-                    do
+                    /*  same as the loop obove, but using do-while and while. */
+
+                    /* do
                     {
                         printf("Cima\n");
                         knight++;
@@ -114,24 +156,39 @@ int main()
                         }
                     } while (knight < 3); */
 
+                    breakLine();
+                    break;
                 case 5:
                     /* Leave the moving piece option */
 
+                    breakLine();
                     printf("Saindo...\n");
+                    breakLine();
+
                     break;
                 default:
+                    breakLine();
                     printf("Alternativa inválida...\n");
+                    breakLine();
+
                     break;
                 }
-            } while (piece != 4);
+            } while (piece != 5);
 
             break;
         case 3:
             /* leave the program */
+
+            breakLine();
             printf("Saindo...\n");
+            breakLine();
+
             break;
         default:
+            breakLine();
             printf("Alternativa inválida...\n");
+            breakLine();
+            
             break;
         }
 
